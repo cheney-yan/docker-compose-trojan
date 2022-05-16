@@ -1,3 +1,9 @@
+# This is a shameless copy from 
+
+https://github.com/kevin-morgan/trojan-caddy-docker-compose.git
+
+Where I only replace docker-compose from building docker container locally to a pre-built image by me.
+
 # trojan-caddy-docker-compose
 
 Trojan server and Caddy integration with Docker compose。
@@ -31,7 +37,6 @@ Git clone this repo then change directory to this project.
     Change `your_domain_name` to your own domain name on `config:json:12-13`, this is your domain ssl certification path, Caddy server generate certs automatically on the path `/ssl/your_domain_name/your_domain_name.crt`
  
 3. Run `docker-compose up` or `docker-compose up -d`  with Daemon mode
-4. When each container is successfully built, it means that your Trojan and Caddy servers are working well.
 
 ## Tips
 

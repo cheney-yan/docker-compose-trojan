@@ -2,7 +2,7 @@ version: '3'
 
 services:
   trojan:
-      build: ./trojan
+      image: cheneyyan/trojan
       ports:
         - "443:443"
       volumes:
@@ -13,6 +13,7 @@ services:
         - caddy:__DOCKER_CADDY__
       depends_on: 
         - caddy
+      restart: always 
 
   caddy:
       image: abiosoft/caddy
@@ -22,3 +23,5 @@ services:
         - ./www:/usr/src
         - ./caddy/Caddyfile:/etc/Caddyfile
         - ./ssl:/root/.caddy/acme/acme-v02.api.letsencrypt.org/sites
+      restart: always
+
